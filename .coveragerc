@@ -1,0 +1,36 @@
+[run]
+# Diretórios ou padrões a serem incluídos na análise de cobertura
+source = 
+    a_core
+    app_um
+
+# Arquivos ou diretórios a serem ignorados
+omit = 
+    */migrations/*
+    */tests/*
+    */settings.py
+    */asgi.py
+    */wsgi.py
+    */__init__.py
+    */admin.py
+    */apps.py
+    */models.py
+    */urls.py
+
+[report]
+# Mostra as linhas que não foram cobertas
+show_missing = True
+# Ordena os relatórios por nome de módulo
+sort = Name
+# Remove do relatório módulos que têm 100% de cobertura
+skip_covered = True
+
+[html]
+# Diretório para o relatório HTML
+directory = htmlcov
+# Título para o relatório HTML
+title = Relatório de Cobertura do Projeto Django
+
+[xml]
+# Nome do arquivo XML para relatórios em formato Cobertura XML (para CI/CD)
+output = coverage.xml

@@ -1,0 +1,7 @@
+*.py
+*.yml
+db.sqlite3
+static/
+media/
+venv/
+htmlcov/

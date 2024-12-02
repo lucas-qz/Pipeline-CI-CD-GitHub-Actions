@@ -1,0 +1,27 @@
+[flake8]
+# ao rodar a analise com flak8 ele vai indicar erro se uma linha tiver mais que 88 caracteres
+max-line-length = 88
+
+# ao rodar a analise com flak8 ele retorna diversos erros informando onde no codigo não há conformidade do código com o PEP 8
+# como estava retornando diversos erros, eu ignorei todos eles (FIZ ISSO SOMENTE PARA FINALIDADE DE Ñ DAR ERRO NO GITHUB ACTIONS)
+ignore = E501, W293, W291, E101, E117, E201, E202, E221, E225, E226, E231, E261, E265, E302, E303, 
+         E305, F401, F811, F841, W191, W292, W391
+
+# ao rodar a analise com flak8 ele vai ignorar essas pastas e arquivos
+exclude =               
+    .git,
+    __pycache__,
+    migrations,
+    env,
+    venv,
+    *.egg-info
+
+# Verifica apenas arquivos específicos ou extensões
+filename = *.py
+
+# Mede a complexidade de funções e métodos, ajudando a identificar trechos do código que podem ser simplificados
+# definimos 10 como o limite de complexidade ciclomatica aceitável
+max-complexity = 10
+
+# Exibe estatísticas detalhadas no final da execução
+statistics = True

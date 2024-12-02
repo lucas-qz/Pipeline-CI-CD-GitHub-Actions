@@ -1,0 +1,16 @@
+## ----------------- ISSO FAZ QUE ANTES DE CADA COMMIT ELE RODE O PRETTIER E O BLACK ----------------------------------------------
+# PRETTIER (formatar os arquivos html, css, js, json)
+# BLACK    (formatar os arquivos .py)
+repos:
+    # Configuração do Black
+    - repo: https://github.com/psf/black
+      rev: 24.10.0 # Substitua pela versão desejada do Black
+      hooks:
+          - id: black
+
+    # Configuração do Prettier
+    - repo: https://github.com/pre-commit/mirrors-prettier
+      rev: v3.0.0 # Substitua pela versão desejada do Prettier
+      hooks:
+          - id: prettier
+            additional_dependencies: [prettier@3.3.3] # Opcional: forçar versão específica
